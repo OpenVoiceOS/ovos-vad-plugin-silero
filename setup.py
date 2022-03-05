@@ -2,7 +2,7 @@
 from setuptools import setup
 
 PLUGIN_ENTRY_POINT = 'ovos-vad-plugin-silero = ' \
-                     'ovos_vad_plugin_silero:GladosTTSPlugin'
+                     'ovos_vad_plugin_silero:SileroVAD'
 setup(
     name='ovos-vad-plugin-silero',
     version='0.0.1',
@@ -12,7 +12,7 @@ setup(
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     packages=['ovos_vad_plugin_silero'],
-    install_requires=["ovos-plugin-manager>=0.0.11a4",
+    install_requires=["ovos-plugin-manager>=0.0.11",
                       "onnxruntime"],
     zip_safe=True,
     classifiers=[
