@@ -55,14 +55,15 @@ class SileroVoiceActivityDetector:
 
 
 class SileroVAD(VADEngine):
-    def __init__(self, config=None):
-        super().__init__(config)
+    def __init__(self, config=None, sample_rate=None):
+        super().__init__(config, sample_rate)
         model = self.config.get("model") or join(dirname(__file__), "silero_vad.onnx")
+        self.vad_threshold = self.config.get("threshold", 0.2)
         self.vad = SileroVoiceActivityDetector(model)
 
-    def is_silence(self, chunk, vad_threshold):
+    def is_silence(self, chunk):
         # return True or False
         audio_array = np.frombuffer(chunk, dtype=np.int16)
-        return self.vad(audio_array) < vad_threshold
+        return self.vad(audio_array) < self.vad_threshold
 
 
