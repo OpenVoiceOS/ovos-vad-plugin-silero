@@ -12,6 +12,7 @@ setup(
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
     packages=['ovos_vad_plugin_silero'],
+    package_data={'ovos_vad_plugin_silero': ['silero_vad.onnx']},
     install_requires=["ovos-plugin-manager>=0.0.11",
                       "onnxruntime"],
     zip_safe=True,
