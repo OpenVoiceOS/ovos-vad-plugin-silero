@@ -15,9 +15,9 @@ class SileroVoiceActivityDetector:
         self.session.intra_op_num_threads = 1
         self.session.inter_op_num_threads = 1
 
-        self._reset_states()
+        self.reset()
 
-    def _reset_states(self):
+    def reset(self):
         self._h = np.zeros((2, 1, 64)).astype("float32")
         self._c = np.zeros((2, 1, 64)).astype("float32")
 
@@ -60,6 +60,9 @@ class SileroVAD(VADEngine):
         model = self.config.get("model") or join(dirname(__file__), "silero_vad.onnx")
         self.vad_threshold = self.config.get("threshold", 0.2)
         self.vad = SileroVoiceActivityDetector(model)
+
+    def reset(self):
+        self.vad.reset()
 
     def is_silence(self, chunk):
         # return True or False
