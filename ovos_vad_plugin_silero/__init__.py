@@ -64,6 +64,6 @@ class SileroVAD(VADEngine):
     def is_silence(self, chunk):
         # return True or False
         audio_array = np.frombuffer(chunk, dtype=np.int16)
-        return self.vad(audio_array) < self.vad_threshold
+        return self.vad(audio_array)[0] < self.vad_threshold
 
 
