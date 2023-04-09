@@ -1,0 +1,3 @@
+[ovos.plugin.VAD]
+ovos-vad-plugin-silero = ovos_vad_plugin_silero:SileroVAD
+
