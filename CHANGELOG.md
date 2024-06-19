@@ -1,5 +1,9 @@
 # Changelog
 
+## [V0.0.1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.1) (2023-04-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.1a2...V0.0.1)
+
 ## [V0.0.1a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.1a2) (2023-04-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/207b100d2c1ded7484d15963e6ec33b9db09b415...V0.0.1a2)
