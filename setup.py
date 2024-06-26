@@ -38,6 +38,12 @@ def package_files(directory):
     return paths
 
 
+def get_description():
+    with open(os.path.join(BASEDIR, "README.md"), "r") as f:
+        long_description = f.read()
+    return long_description
+
+
 def required(requirements_file):
     """ Read requirements file and remove comments and empty lines. """
     with open(os.path.join(BASEDIR, requirements_file), 'r') as f:
@@ -55,6 +61,7 @@ setup(
     name='ovos-vad-plugin-silero',
     version=get_version(),
     description='silero VAD plugin for OpenVoiceOS',
+    long_description=get_description(),
     url='https://github.com/OpenVoiceOS/ovos-vad-plugin-silero',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
