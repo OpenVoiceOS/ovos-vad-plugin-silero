@@ -4,5 +4,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  py_build_tests:
+  build_tests:
     uses: neongeckocom/.github/.github/workflows/python_build_tests.yml@master
