@@ -62,6 +62,7 @@ setup(
     version=get_version(),
     description='silero VAD plugin for OpenVoiceOS',
     long_description=get_description(),
+    long_description_content_type="text/markdown",
     url='https://github.com/OpenVoiceOS/ovos-vad-plugin-silero',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
