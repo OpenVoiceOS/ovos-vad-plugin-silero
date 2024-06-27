@@ -6,7 +6,7 @@ on:
     branches:
       - dev
     paths-ignore:
-      - 'ovos_plugin_manager/version.py'
+      - 'ovos_vad_plugin_silero/version.py'
       - 'test/**'
       - 'examples/**'
       - '.github/**'
@@ -23,7 +23,7 @@ jobs:
     uses: neongeckocom/.github/.github/workflows/propose_semver_release.yml@master
     with:
       release_type: "alpha"
-      version_file: ovos_plugin_manager/version.py
+      version_file: ovos_vad_plugin_silero/version.py
       alpha_var: VERSION_ALPHA
       build_var: VERSION_BUILD
       minor_var: VERSION_MINOR
@@ -35,7 +35,7 @@ jobs:
     needs: update_version
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: dev
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
