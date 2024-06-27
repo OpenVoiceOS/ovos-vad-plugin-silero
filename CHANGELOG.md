@@ -1,16 +1,16 @@
 # Changelog
 
-## [V0.0.1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.1) (2023-04-09)
+## [0.0.2a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.2a2) (2024-06-27)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.1a2...V0.0.1)
-
-## [V0.0.1a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.1a2) (2023-04-09)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/207b100d2c1ded7484d15963e6ec33b9db09b415...V0.0.1a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.2a1...0.0.2a2)
 
 **Merged pull requests:**
 
-- include model in setup [\#1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/1) ([emphasize](https://github.com/emphasize))
+- Update GHA to match org standards [\#4](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/4) ([NeonDaniel](https://github.com/NeonDaniel))
+
+## [V0.0.2a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.2a1) (2024-06-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.1...V0.0.2a1)
 
 
 
