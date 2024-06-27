@@ -1,12 +1,17 @@
 # Changelog
 
-## [0.0.2a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.2a2) (2024-06-27)
+## [0.0.2a3](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.2a3) (2024-06-27)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.2a1...0.0.2a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.2a1...0.0.2a3)
+
+**Closed issues:**
+
+- missing readme with detailed installation instructions [\#2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/issues/2)
 
 **Merged pull requests:**
 
 - Update GHA to match org standards [\#4](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/4) ([NeonDaniel](https://github.com/NeonDaniel))
+- Add README.md and update setup.py [\#3](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/3) ([NeonDaniel](https://github.com/NeonDaniel))
 
 ## [V0.0.2a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.2a1) (2024-06-19)
 
