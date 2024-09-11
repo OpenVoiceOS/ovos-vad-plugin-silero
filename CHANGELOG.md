@@ -1,12 +1,24 @@
 # Changelog
 
-## [V0.0.1a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.1a2) (2023-04-09)
+## [0.0.2a6](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.2a6) (2024-09-11)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/207b100d2c1ded7484d15963e6ec33b9db09b415...V0.0.1a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.2a1...0.0.2a6)
+
+**Closed issues:**
+
+- missing readme with detailed installation instructions [\#2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/issues/2)
 
 **Merged pull requests:**
 
-- include model in setup [\#1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/1) ([emphasize](https://github.com/emphasize))
+- feat:semver [\#7](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/7) ([JarbasAl](https://github.com/JarbasAl))
+- Fix setup.py error and update build tests to use shared action [\#6](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/6) ([NeonDaniel](https://github.com/NeonDaniel))
+- Remove build files and add .gitignore [\#5](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/5) ([NeonDaniel](https://github.com/NeonDaniel))
+- Update GHA to match org standards [\#4](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/4) ([NeonDaniel](https://github.com/NeonDaniel))
+- Add README.md and update setup.py [\#3](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/3) ([NeonDaniel](https://github.com/NeonDaniel))
+
+## [V0.0.2a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.2a1) (2024-06-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.1...V0.0.2a1)
 
 
 
