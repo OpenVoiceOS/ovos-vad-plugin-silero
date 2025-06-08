@@ -1,16 +1,12 @@
 # Changelog
 
-## [0.0.3a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.3a1) (2025-04-02)
+## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.4a1) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.2...0.0.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.0.3...0.0.4a1)
 
 **Merged pull requests:**
 
-- fix: onnxruntime version [\#9](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/9) ([JarbasAl](https://github.com/JarbasAl))
-
-## [V0.0.2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.2) (2024-09-11)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.0.2...V0.0.2)
+- fix: compatibility with ovos-plugin-manager 1.X.X [\#11](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/11) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
