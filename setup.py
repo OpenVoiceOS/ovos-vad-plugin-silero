@@ -55,8 +55,6 @@ def required(requirements_file):
                 if pkg.strip() and not pkg.startswith("#")]
 
 
-PLUGIN_ENTRY_POINT = 'ovos-vad-plugin-silero = ' \
-                     'ovos_vad_plugin_silero:SileroVAD'
 setup(
     name='ovos-vad-plugin-silero',
     version=get_version(),
@@ -89,5 +87,8 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='mycroft plugin VAD OVOS OpenVoiceOS',
-    entry_points={'ovos.plugin.VAD': PLUGIN_ENTRY_POINT}
+    entry_points={
+        'opm.VAD': 'ovos-vad-plugin-silero=ovos_vad_plugin_silero:SileroVAD',
+        'opm.wake_word.verifier': 'ovos-ww-verifier-silero=ovos_vad_plugin_silero:SileroVADVerifier'
+    }
 )
