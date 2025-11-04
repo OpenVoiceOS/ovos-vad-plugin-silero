@@ -1,7 +1,10 @@
-from ovos_plugin_manager.templates.vad import VADEngine
 from os.path import join, dirname
-import onnxruntime
+from typing import Optional, Dict, Any
+
 import numpy as np
+import onnxruntime
+from ovos_plugin_manager.templates.hotwords import HotWordVerifier
+from ovos_plugin_manager.templates.vad import VADEngine
 
 
 class SileroVoiceActivityDetector:
@@ -70,3 +73,34 @@ class SileroVAD(VADEngine):
         return self.vad(audio_array)[0] < self.vad_threshold
 
 
+class SileroVADVerifier(HotWordVerifier):
+    """
+    A HotWordVerifier plugin that uses Silero VAD to confirm that the audio
+    chunk following a wake word detection contains sufficient human speech.
+    """
+
+    def __init__(self, config: Optional[Dict[str, Any]] = None):
+        super().__init__(config)
+        self.vad_model_path = self.config.get("model") or join(dirname(__file__), "silero_vad.onnx")
+        # Probability threshold for audio to be considered "speech"
+        self.vad_threshold = self.config.get("threshold", 0.1)
+        self.vad = SileroVoiceActivityDetector(self.vad_model_path)
+
+    def verify(self, chunk: bytes) -> bool:
+        """
+        Verifies the audio chunk: requires a minimum ratio of VAD frames
+        to be classified as speech to confirm the activation.
+        
+        Args:
+            chunk: Audio bytes in 16-bit PCM format at 16kHz sample rate
+            
+        Returns:
+            True if the audio contains sufficient speech, False otherwise
+        """
+        try:
+            audio_array_int16 = np.frombuffer(chunk, dtype=np.int16)
+            prob = self.vad(audio_array_int16)[0]
+            return prob >= self.vad_threshold
+        except (ValueError, Exception) as e:
+            # Log the error and return False to reject invalid audio
+            return False
