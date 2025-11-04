@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.0a1) (2025-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.0.6a1...0.1.0a1)
+
+**Merged pull requests:**
+
+- feat: ww verifier [\#16](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.6a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.6a1) (2025-09-06)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.5...0.0.6a1)
