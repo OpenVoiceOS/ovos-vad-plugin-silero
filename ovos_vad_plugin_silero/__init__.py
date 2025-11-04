@@ -90,7 +90,17 @@ class SileroVADVerifier(HotWordVerifier):
         """
         Verifies the audio chunk: requires a minimum ratio of VAD frames
         to be classified as speech to confirm the activation.
+        
+        Args:
+            chunk: Audio bytes in 16-bit PCM format at 16kHz sample rate
+            
+        Returns:
+            True if the audio contains sufficient speech, False otherwise
         """
-        audio_array_int16 = np.frombuffer(chunk, dtype=np.int16)
-        prob = self.vad(audio_array_int16)[0]
-        return prob >= self.vad_threshold
+        try:
+            audio_array_int16 = np.frombuffer(chunk, dtype=np.int16)
+            prob = self.vad(audio_array_int16)[0]
+            return prob >= self.vad_threshold
+        except (ValueError, Exception) as e:
+            # Log the error and return False to reject invalid audio
+            return False
