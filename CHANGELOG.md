@@ -1,24 +1,16 @@
 # Changelog
 
-## [0.1.0a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.0a1) (2025-11-04)
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.1a1) (2025-12-18)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.0.6a1...0.1.0a1)
-
-**Merged pull requests:**
-
-- feat: ww verifier [\#16](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/16) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.0.6a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.0.6a1) (2025-09-06)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.0.5...0.0.6a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.1.0...0.1.1a1)
 
 **Merged pull requests:**
 
-- fix: requirements.txt [\#14](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+- chore: Configure Renovate [\#18](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/18) ([renovate[bot]](https://github.com/apps/renovate))
 
-## [V0.0.5](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.0.5) (2025-06-10)
+## [V0.1.0](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/V0.1.0) (2025-11-04)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.0.5...V0.0.5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.0...V0.1.0)
 
 
 
