@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.1a2) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.1a1...0.1.1a2)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/setup-python action to v6 [\#23](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/23) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.1a1) (2025-12-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/V0.1.0...0.1.1a1)
