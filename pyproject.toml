@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-vad-plugin-silero"
+dynamic = ["version"]
+description = "silero VAD plugin for OpenVoiceOS"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "JarbasAi", email = "jarbasai@mailfence.com" }]
+requires-python = ">=3.9"
+keywords = ["vad", "silero", "ovos", "openvoiceos", "plugin", "voice-activity-detection"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "ovos-plugin-manager>=2.1.0a1,<3.0.0",
+    "onnxruntime",
+    "numpy<3.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-vad-plugin-silero"
+Repository = "https://github.com/OpenVoiceOS/ovos-vad-plugin-silero"
+
+[project.entry-points."opm.VAD"]
+"ovos-vad-plugin-silero" = "ovos_vad_plugin_silero:SileroVAD"
+
+[project.entry-points."opm.wake_word.verifier"]
+"ovos-ww-verifier-silero" = "ovos_vad_plugin_silero:SileroVADVerifier"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["ovos_vad_plugin_silero*"]
+
+[tool.setuptools.package-data]
+ovos_vad_plugin_silero = ["silero_vad.onnx"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ovos_vad_plugin_silero.version.__version__" }
