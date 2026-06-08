@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.3a1) (2026-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.2a2...0.1.3a1)
+
+**Merged pull requests:**
+
+- fix: add publish\_pypi: true to release workflow [\#28](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.2a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.2a2) (2026-06-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.2a1...0.1.2a2)
