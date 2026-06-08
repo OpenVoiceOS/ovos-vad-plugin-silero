@@ -1,7 +1,6 @@
-# auto add labels to PRs
 on:
   pull_request_target:
-    types: [ opened, edited ]
+    types: [opened, edited]
 name: conventional-release-labels
 jobs:
   label:
