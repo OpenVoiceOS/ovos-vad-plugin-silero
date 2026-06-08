@@ -13,10 +13,11 @@ class SileroVoiceActivityDetector:
     https://github.com/snakers4/silero-vad
     """
 
-    def __init__(self, onnx_path):
-        self.session = onnxruntime.InferenceSession(onnx_path)
-        self.session.intra_op_num_threads = 1
-        self.session.inter_op_num_threads = 1
+    def __init__(self, onnx_path, intra_threads: int = 1, inter_threads: int = 1):
+        opts = onnxruntime.SessionOptions()
+        opts.intra_op_num_threads = intra_threads
+        opts.inter_op_num_threads = inter_threads
+        self.session = onnxruntime.InferenceSession(onnx_path, sess_options=opts)
 
         self.reset()
 
