@@ -1,8 +1,12 @@
 name: Run Build Tests
 on:
   push:
+  pull_request:
+    branches:
+      - dev
   workflow_dispatch:
 
 jobs:
   build_tests:
-    uses: neongeckocom/.github/.github/workflows/python_build_tests.yml@master
+    uses: OpenVoiceOS/gh-automations/.github/workflows/build-tests.yml@dev
+    secrets: inherit
