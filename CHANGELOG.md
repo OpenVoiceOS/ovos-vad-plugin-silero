@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.2a2) (2026-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.2a1...0.1.2a2)
+
+**Merged pull requests:**
+
+- chore: migrate to pyproject.toml + gh-automations@dev shared workflows [\#26](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/26) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.2a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.2a1) (2026-06-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.1a3...0.1.2a1)
