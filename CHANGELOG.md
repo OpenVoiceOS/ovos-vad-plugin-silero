@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.2a1) (2026-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.1a3...0.1.2a1)
+
+**Merged pull requests:**
+
+- fix: use SessionOptions to actually limit ORT thread pool [\#25](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/25) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.1a3](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.1a3) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.1a2...0.1.1a3)
