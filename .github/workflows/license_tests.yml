@@ -11,4 +11,3 @@ on:
 jobs:
   license_tests:
     uses: OpenVoiceOS/gh-automations/.github/workflows/license-check.yml@dev
-    secrets: inherit
