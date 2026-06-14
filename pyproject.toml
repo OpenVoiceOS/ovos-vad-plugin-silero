@@ -30,6 +30,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov"]
+test = ["pytest", "pytest-cov", "ovoscope"]
 
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-vad-plugin-silero"
