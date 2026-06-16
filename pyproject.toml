@@ -23,14 +23,21 @@ classifiers = [
     "Topic :: Multimedia :: Sound/Audio :: Speech",
 ]
 dependencies = [
-    "ovos-plugin-manager>=2.1.0a1,<3.0.0",
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
     "onnxruntime",
     "numpy<3.0.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov"]
-test = ["pytest", "pytest-cov", "ovoscope"]
+test = [
+    "pytest",
+    "pytest-cov",
+    # MiniVoiceLoop e2e tests need ovoscope.voice_loop (added in 0.19.1a2,
+    # which also fixes the pytest>=8 collection hook); not yet on PyPI.
+    "ovoscope @ git+https://github.com/TigreGotico/ovoscope@dev ; python_version >= '3.10'",
+    "ovos-dinkum-listener ; python_version >= '3.10'",
+]
 
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-vad-plugin-silero"
