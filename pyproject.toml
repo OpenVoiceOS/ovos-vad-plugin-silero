@@ -23,14 +23,14 @@ classifiers = [
     "Topic :: Multimedia :: Sound/Audio :: Speech",
 ]
 dependencies = [
-    "ovos-plugin-manager>=2.1.0a1,<3.0.0",
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
     "onnxruntime",
     "numpy<3.0.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov"]
-test = ["pytest", "pytest-cov", "ovoscope"]
+test = ["pytest", "pytest-cov", "ovoscope<1.0.0"]
 
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-vad-plugin-silero"
