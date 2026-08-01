@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a4](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.3a4) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.3a3...0.1.3a4)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#35](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/35) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.3a3](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.3a3) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.3a2...0.1.3a3)
