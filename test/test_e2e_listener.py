@@ -8,12 +8,8 @@ import wave
 from pathlib import Path
 from unittest.mock import MagicMock
 
-import pytest
-
-ovoscope = pytest.importorskip("ovoscope", reason="ovoscope not installed")
-
-from ovoscope.listener import get_mini_listener, MockHotWordEngine  # noqa: E402
-from ovoscope.voice_loop import MiniVoiceLoop, MockStreamingSTT  # noqa: E402
+from ovoscope.listener import get_mini_listener, MockHotWordEngine
+from ovoscope.voice_loop import MiniVoiceLoop, MockStreamingSTT
 
 FIXTURE = Path(__file__).parent / "fixtures" / "command.wav"
 
