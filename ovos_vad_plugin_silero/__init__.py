@@ -77,31 +77,50 @@ class SileroVAD(VADEngine):
 class SileroVADVerifier(HotWordVerifier):
     """
     A HotWordVerifier plugin that uses Silero VAD to confirm that the audio
-    chunk following a wake word detection contains sufficient human speech.
+    leading up to a wake word detection contains sufficient human speech.
+
+    Every 32 ms frame of the buffer is scored, and the activation is confirmed
+    when any ``window_seconds`` run of frames holds enough speech. Silence
+    before or after the word does not dilute the result.
     """
+
+    # Silero VAD is trained on 512-sample windows at 16 kHz.
+    FRAME_SAMPLES = 512
 
     def __init__(self, config: Optional[Dict[str, Any]] = None):
         super().__init__(config)
         self.vad_model_path = self.config.get("model") or join(dirname(__file__), "silero_vad.onnx")
-        # Probability threshold for audio to be considered "speech"
-        self.vad_threshold = self.config.get("threshold", 0.1)
+        # Speech probability a frame needs to count as speech
+        self.vad_threshold = self.config.get("threshold", 0.5)
+        # Share of frames in the best window that must be speech
+        self.min_speech_ratio = self.config.get("min_speech_ratio", 0.15)
+        # Length of the run of frames that must hold the speech
+        self.window_seconds = self.config.get("window_seconds", 1.0)
         self.vad = SileroVoiceActivityDetector(self.vad_model_path)
 
     def verify(self, chunk: bytes) -> bool:
         """
         Verifies the audio chunk: requires a minimum ratio of VAD frames
-        to be classified as speech to confirm the activation.
-        
+        in some ``window_seconds`` run of the buffer to be speech.
+
         Args:
             chunk: Audio bytes in 16-bit PCM format at 16kHz sample rate
-            
+
         Returns:
             True if the audio contains sufficient speech, False otherwise
         """
         try:
-            audio_array_int16 = np.frombuffer(chunk, dtype=np.int16)
-            prob = self.vad(audio_array_int16)[0]
-            return prob >= self.vad_threshold
-        except (ValueError, Exception) as e:
-            # Log the error and return False to reject invalid audio
+            audio = np.frombuffer(chunk, dtype=np.int16)
+        except ValueError:
+            return False  # not 16-bit PCM
+        n_frames = len(audio) // self.FRAME_SAMPLES
+        if n_frames == 0:
             return False
+        # Frames end at the detection; a partial frame at the start is dropped.
+        frames = audio[len(audio) - n_frames * self.FRAME_SAMPLES:].reshape(n_frames, self.FRAME_SAMPLES)
+        # Each detection is scored on its own, with no state from the last one.
+        self.vad.reset()
+        speech = np.array([self.vad(frame)[0] >= self.vad_threshold for frame in frames], dtype=float)
+        window = min(n_frames, max(1, int(self.window_seconds * 16000) // self.FRAME_SAMPLES))
+        best = np.convolve(speech, np.ones(window), mode="valid").max()
+        return best / window >= self.min_speech_ratio
