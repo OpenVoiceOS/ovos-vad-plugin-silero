@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.4a1) (2026-10-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.3a4...0.1.4a1)
+
+**Merged pull requests:**
+
+- fix\(verifier\): score speech in any one-second run of the buffer [\#37](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/37) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.3a4](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.3a4) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.3a3...0.1.3a4)
