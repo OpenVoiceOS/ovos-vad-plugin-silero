@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.5a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.5a1) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.4a1...0.1.5a1)
+
+**Merged pull requests:**
+
+- fix: install ovoscope from PyPI in the test extra [\#38](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/pull/38) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.4a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/tree/0.1.4a1) (2026-10-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero/compare/0.1.3a4...0.1.4a1)
